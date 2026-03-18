@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('scm') {
       steps {
         echo 'hello world'
       }
