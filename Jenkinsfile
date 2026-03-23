@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('scm') {
+    stage('build') {
       steps {
-        echo 'hello world'
+        echo 'build comblited'
       }
     }
 
@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('asd') {
           steps {
-            echo 'running test'
+            echo 'test combilited'
           }
         }
 
@@ -21,6 +21,18 @@ pipeline {
           }
         }
 
+      }
+    }
+
+    stage('deploy') {
+      steps {
+        input(message: 'are you sure to move the next step?', ok: 'yes,iam sure')
+      }
+    }
+
+    stage('notfiy ') {
+      steps {
+        echo 'notify me this pipeline end succesfuly'
       }
     }
 
