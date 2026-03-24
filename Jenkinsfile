@@ -9,7 +9,7 @@ pipeline {
 
     stage('test') {
       parallel {
-        stage('asd') {
+        stage('test1') {
           steps {
             echo 'test combilited'
           }
