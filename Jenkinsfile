@@ -12,8 +12,11 @@ pipeline {
         stage('test1') {
           steps {
             echo 'test combilited'
-            retry(count: 3)
-            sh 'ftgdfdfdx'
+            retry(count: 3) {
+              sh '''dtydydtrt
+'''
+            }
+
           }
         }
 
